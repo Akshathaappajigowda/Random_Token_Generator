@@ -130,7 +130,16 @@ function App() {
                 >
                   <TableHead>
                     <TableRow>
-                      <TableCell>Valid tokens</TableCell>
+                      <TableCell
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: "bold",
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Valid tokens
+                      </TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
