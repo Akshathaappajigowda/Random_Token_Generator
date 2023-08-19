@@ -4,7 +4,7 @@ import "./App.css";
 import ValidTokenTable from "./components/ValidTokenTable";
 
 function App() {
-  const [digits, setDigits] = useState("0");
+  const [digits, setDigits] = useState("0123456789");
   const [singleToken, setSingleToken] = useState("");
   const [isValid, setIsValid] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
