@@ -1,18 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import {
-  Button,
-  Typography,
-  TextField,
-  ButtonGroup,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from "@mui/material";
-import Paper from "@mui/material/Paper";
+import { Button, Typography, TextField, ButtonGroup } from "@mui/material";
 import "./App.css";
+import ValidTokenTable from "./components/ValidTokenTable";
 
 function App() {
   const [digits, setDigits] = useState("0");
@@ -121,44 +110,7 @@ function App() {
             </Typography>
             <Typography>Total count: {totalCount}</Typography>
             <Typography>Valid count: {validCount}</Typography>
-            {validTokens.length > 0 && (
-              <TableContainer component={Paper}>
-                <Table
-                  sx={{ minWidth: 650 }}
-                  size="small"
-                  aria-label="a dense table"
-                >
-                  <TableHead>
-                    <TableRow>
-                      <TableCell
-                        style={{
-                          fontSize: "20px",
-                          fontWeight: "bold",
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        Valid tokens
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {validTokens.map((token, i) => (
-                      <TableRow
-                        key={i}
-                        sx={{
-                          "&:last-child td, &:last-child th": { border: 0 },
-                        }}
-                      >
-                        <TableCell component="th" scope="row">
-                          {token}
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            )}
+            <ValidTokenTable validTokens={validTokens} />
           </div>
         </div>
       </div>

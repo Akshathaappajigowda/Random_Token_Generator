@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { validateToken } = require("./ValidatorService");
+const { validateToken } = require("./validatorService");
 
 const app = express();
 app.use(cors());
